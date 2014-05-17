@@ -75,7 +75,7 @@ begin
         end
 
 		# Set Path for Sitemap output option
-		options.on('-o', '--output <path>', 'Specify path where the newly generated sitemap should be placed') do |output|
+		options.on('-o', '--output <path>', 'Specify path where the newly generated sitemap should be placed. Do not include sitemap file name.') do |output|
 			startoptions[:output] = output
 		end
 	end

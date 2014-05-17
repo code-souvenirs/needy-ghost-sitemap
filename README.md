@@ -71,7 +71,7 @@ Needy Ghost Sitemap Generator
 *	-p, --priority <value>		Specify sitemap generated links priority. (required)
 								Possible value range: 0.0 to 1.0
 
-*	-o, --output <path>			Specify path where the newly generated sitemap should be placed
+*	-o, --output <path>			Specify path where the newly generated sitemap should be placed. Do not include sitemap file name.
 
 
 **Step:** Sample usage with ping and verbose mode
@@ -89,3 +89,42 @@ Needy Ghost Sitemap Generator
 **Step:** Sample usage without ping or verbose
 
 	sudo needy-ghost-sitemap.rb -d http://blog.jsinh.in -m 127.0.0.1 -r ghostdb -u ghostuser -c ghostpassword -o /var/www/ -f daily -p 0.5
+
+---
+
+###Flashback:
+
+Currently Ghost does not provide out-of-the-box support for sitemap generation. So first thing I do is search google:
+
+Option 1:	[Generate sitemap using SHELL script](http://ghost.centminmod.com/ghost-sitemap-generator/) (I could not get my head around and make it work with my installation, brain-freeze SHELL script for me)
+
+Option 2:	[Generate sitemap using RUBY script with MySQL](https://github.com/mmornati/ghost-sitemap-generator) (I used this initially, worked well but not complete)
+
+Option 3:	Next search was "[Generate sitemap online](http://www.xml-sitemaps.com/)". This generated the best (with all links included - sitemap but has a limitation of generating 500 links for free user)
+
+So option 1 didn't work for me all at, option 2 generated site map for index page (with pagination) and posts only and no tag links generated and option 3 had a limitation, plus I had to generate manually and upload everytime.
+
+---
+
+###Credits:
+
+Option 2 was the best one I can rely on, so I took the idea and decided to groom it to my needs.
+
+Base idea and [original code](https://github.com/mmornati/ghost-sitemap-generator) credits to : [Macro Mornati](http://blog.mornati.net/optimize-ghost-for-seo-sitemap-generator/), thanks !!
+
+Life became cool with [Sitemap_generator](https://github.com/kjvarga/sitemap_generator) gem in ruby, thanks !!
+
+---
+
+###Why not use option 2 and re-invent the wheel
+
+Here is why (no offense, please)
+
+*	Links for tags not generated.
+*	Sitemap generated in from of *.xml file, what if my blog grows to 500 articles and 5000 tags, I needed *.tar.gz.
+*	It used raw XML namespace and schema references, will break or might not be valid if the sitemap protocol changes. Using sitemap_generator will save me from those tidious work, those ninga's will probably take care of it.
+*	Added more validation and more readable verbose logs.
+
+---
+
+Note: I am a C# / .NET guy and this was my first very piece of code written in RUBY. Feel free to poke me for any changes you might need (if I can figure that out) or feel my code is hilarious, share the joke :D
