@@ -17,6 +17,7 @@ Needy Ghost Sitemap Generator
 ###Requires:
 
 *	A blog hosted on [ghost blogging platform](https://ghost.org) (duh)
+*	The blog should be using MySQL as backend (this script works with MySQL only...for now)
 *	[Ruby](https://www.ruby-lang.org/en/installation/) (I used verion: 1.9.3)
 
 ###Some gem information:
@@ -69,3 +70,20 @@ Needy Ghost Sitemap Generator
 								Possible value range: 0.0 to 1.0
 
 *	-o, --output <path>			Specify path where the newly generated sitemap should be placed
+
+
+**Step:** Sample usage with ping and verbose mode
+
+	sudo needy-ghost-sitemap.rb -d http://blog.jsinh.in -m 127.0.0.1 -r ghostdb -u ghostuser -c ghostpassword -o /var/www/ -f daily -p 0.5 -s -v
+
+**Step:** Sample usage with ping only
+
+	sudo needy-ghost-sitemap.rb -d http://blog.jsinh.in -m 127.0.0.1 -r ghostdb -u ghostuser -c ghostpassword -o /var/www/ -f daily -p 0.5 -s
+
+**Step:** Sample usage with verbose only
+
+	sudo needy-ghost-sitemap.rb -d http://blog.jsinh.in -m 127.0.0.1 -r ghostdb -u ghostuser -c ghostpassword -o /var/www/ -f daily -p 0.5 -v
+
+**Step:** Sample usage without ping or verbose
+
+	sudo needy-ghost-sitemap.rb -d http://blog.jsinh.in -m 127.0.0.1 -r ghostdb -u ghostuser -c ghostpassword -o /var/www/ -f daily -p 0.5

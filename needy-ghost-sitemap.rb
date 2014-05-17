@@ -21,6 +21,11 @@ begin
 			exit
 		end
 
+		options.on('-w','--version', "Displays scripts version information") do
+			puts "Version: 1.2"
+			exit
+		end
+
 		# Set verbosity option
 		options.on( '-v', '--verbose', 'Display verbose information during execution') do |verbose|
 			startoptions[:verbose] = verbose
@@ -116,7 +121,7 @@ begin
 		exit
 	end
 
-	puts "\n===============> Start execution <==============="
+	puts "\n===============> Start execution <===============" unless !startoptions[:verbose]
 	puts "\nYour options:" unless !startoptions[:verbose]
 	pp startoptions unless !startoptions[:verbose]
 
@@ -164,7 +169,12 @@ begin
 
 	puts "\nGenerating some serious sitemap..." unless !startoptions[:verbose]
 	SitemapGenerator::Sitemap.default_host = startoptions[:domain]
-	SitemapGenerator.verbose = true unless !startoptions[:verbose]
+	# Display Sitemap generator verbose based on our verbose value.
+	if startoptions[:verbose] == true
+		SitemapGenerator::Sitemap.verbose = true
+	else
+		SitemapGenerator::Sitemap.verbose = false
+	end
 	SitemapGenerator::Sitemap.ping_search_engines unless !startoptions[:ping]
 	SitemapGenerator::Sitemap.public_path = startoptions[:output] unless !startoptions[:output]
 	SitemapGenerator::Sitemap.create do
@@ -209,6 +219,7 @@ begin
 	end
 
 	puts "Taddam..Sitemap generated successfully !!" unless !startoptions[:verbose]
+	puts "\n===============> End execution <===============" unless !startoptions[:verbose]
 
 # => Print issues with MySQL if any on console
 rescue Mysql::Error => problem
