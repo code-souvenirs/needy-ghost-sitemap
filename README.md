@@ -48,10 +48,12 @@ Needy Ghost Sitemap Generator
 
 *	-h, --help					Display help options for sitemap generator.
 
-*	-v, --verbose				Display verbose information during execution
+*	-w, --version				Displays scripts version information
+
+*	-v, --verbose				Display verbose information during execution.
 
 *	-s, --ping					Specify this option if you want to ping search engines (google, bing, apple).
-								Will not ping if this option is not specified
+								Will not ping if this option is not specified.
 
 *	-d, --domain <domain-name>	Specify your Ghost blog domain name / url, E.g.: blog.jsinh.in (required)
 
