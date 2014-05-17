@@ -36,6 +36,8 @@ Needy Ghost Sitemap Generator
 	sudo apt-get ruby ruby-dev
 	sudo apt-get install wget
 	sudo wget https://github.com/jsinh/needy-ghost-sitemap/raw/master/needy-ghost-sitemap.rb
+	sudo chown root:root needy-ghost-sitemap.rb
+	sudo chmod +x needy-ghost-sitemap.rb
 
 **Step:** Display help for usage
 
@@ -90,6 +92,31 @@ Needy Ghost Sitemap Generator
 **Step:** Sample usage without ping or verbose
 
 	sudo needy-ghost-sitemap.rb -d http://blog.jsinh.in -m 127.0.0.1 -r ghostdb -u ghostuser -c ghostpassword -o /var/www/ -f daily -p 0.5
+
+---
+
+###Scheduled execution setup:
+
+I am using CRONTAB for scheduled execution of this script.
+
+**Step:** Install CRONTAB
+
+	sudo apt-get update
+	sudo apt-get gnome-schedule
+
+**Step:** Edit crontab and add this script for execution.
+
+	sudo crontab -e
+
+Add the following at end of the file:
+	
+	* */6 * * * ruby <full-path-to-needy-ghost-sitemap.rb> -d <domainame> -m <mysqlhostname> -r <dbname> -u <username> -c <password> -o <output-file-path> -f daily -p 0.9 -s
+
+This executes the script (with ping and no verbose) every 6 hours.
+
+You can collect execution information from CRONTAB execution schedule by using following command instead of the above:
+
+	* */6 * * * ruby <full-path-to-needy-ghost-sitemap.rb> -d <domainame> -m <mysqlhostname> -r <dbname> -u <username> -c <password> -o <output-file-path> -f daily -p 0.9 -s >> <path-to-log-filename> 2>&1
 
 ---
 
