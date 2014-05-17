@@ -10,7 +10,7 @@ Needy Ghost Sitemap Generator
 ###Works on:
 
  *	Windows (Windows 8.1 Pro - Tested during developement)
- *	Linux (Ubuntu - Testing in production - my blog)
+ *	Linux (Ubuntu - Tested in production - my blog)
 
 ---
 
@@ -31,16 +31,41 @@ Needy Ghost Sitemap Generator
 
 **Step:** [Download](https://github.com/jsinh/needy-ghost-sitemap/archive/master.zip) the script on your machine.
 
+	sudo apt-get update
+	sudo apt-get install wget
 	sudo wget https://github.com/jsinh/needy-ghost-sitemap/raw/master/needy-ghost-sitemap.rb
 
 **Step:** Display help for usage
 
 	needy-ghost-sitemap.rb
-
-	or
-
+	OR
 	needy-ghost-sitemap.rb -h
-
-	or
-
+	OR
 	needy-ghost-sitemap.rb --help
+
+**Step:** Input option information
+
+	*	-h, --help					Display help options for sitemap generator.
+
+    *	-v, --verbose				Display verbose information during execution
+
+    *	-s, --ping					Specify this option if you want to ping search engines (google, bing, apple).
+    								Will not ping if this option is not specified
+
+    *	-d, --domain <domain-name>	Specify your Ghost blog domain name / url, E.g.: blog.jsinh.in (required)
+
+    *	-m, --mysql <hostname>		Specify your Ghost blog MySQL host name / IP Address. (required)
+
+    *	-r, --dbname <database>		Specify your Ghost blog MySQL database name. (required)
+
+    *	-u, --user <username>		Specify your Ghost blog MySQL username. (required)
+    
+    *	-c, --password <password>	Specify your Ghost blog MySQL password. (required)
+
+    *	-f, --frequency <option>	Specify sitemap generated links update frequency. (required)
+    								Possible values: always, hourly, daily, weekly, monthly, yearly, never
+
+    *	-p, --priority <value>		Specify sitemap generated links priority. (required)
+    								Possible value range: 0.0 to 1.0
+
+    *	-o, --output <path>			Specify path where the newly generated sitemap should be placed
