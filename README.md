@@ -155,4 +155,13 @@ Here is why (no offense, please)
 
 ---
 
+###License
+
+This work is [licensed](https://github.com/jsinh/needy-ghost-sitemap/raw/master/LICENSE) under:
+
+The MIT License (MIT)
+Copyright (c) 2014 Jaspalsinh Chauhan
+
+---
+
 Note: I am a C# / .NET guy and this was my first very piece of code written in RUBY. Feel free to poke me for any changes you might need (if I can figure that out) or feel my code is hilarious, share the joke :D
