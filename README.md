@@ -45,27 +45,27 @@ Needy Ghost Sitemap Generator
 
 **Step:** Input option information
 
-	*	-h, --help					Display help options for sitemap generator.
+*	-h, --help					Display help options for sitemap generator.
 
-    *	-v, --verbose				Display verbose information during execution
+*	-v, --verbose				Display verbose information during execution
 
-    *	-s, --ping					Specify this option if you want to ping search engines (google, bing, apple).
-    								Will not ping if this option is not specified
+*	-s, --ping					Specify this option if you want to ping search engines (google, bing, apple).
+								Will not ping if this option is not specified
 
-    *	-d, --domain <domain-name>	Specify your Ghost blog domain name / url, E.g.: blog.jsinh.in (required)
+*	-d, --domain <domain-name>	Specify your Ghost blog domain name / url, E.g.: blog.jsinh.in (required)
 
-    *	-m, --mysql <hostname>		Specify your Ghost blog MySQL host name / IP Address. (required)
+*	-m, --mysql <hostname>		Specify your Ghost blog MySQL host name / IP Address. (required)
 
-    *	-r, --dbname <database>		Specify your Ghost blog MySQL database name. (required)
+*	-r, --dbname <database>		Specify your Ghost blog MySQL database name. (required)
 
-    *	-u, --user <username>		Specify your Ghost blog MySQL username. (required)
-    
-    *	-c, --password <password>	Specify your Ghost blog MySQL password. (required)
+*	-u, --user <username>		Specify your Ghost blog MySQL username. (required)
 
-    *	-f, --frequency <option>	Specify sitemap generated links update frequency. (required)
-    								Possible values: always, hourly, daily, weekly, monthly, yearly, never
+*	-c, --password <password>	Specify your Ghost blog MySQL password. (required)
 
-    *	-p, --priority <value>		Specify sitemap generated links priority. (required)
-    								Possible value range: 0.0 to 1.0
+*	-f, --frequency <option>	Specify sitemap generated links update frequency. (required)
+								Possible values: always, hourly, daily, weekly, monthly, yearly, never
 
-    *	-o, --output <path>			Specify path where the newly generated sitemap should be placed
+*	-p, --priority <value>		Specify sitemap generated links priority. (required)
+								Possible value range: 0.0 to 1.0
+
+*	-o, --output <path>			Specify path where the newly generated sitemap should be placed
