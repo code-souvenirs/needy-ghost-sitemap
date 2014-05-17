@@ -1,4 +1,6 @@
-needy-ghost-sitemap
+Needy Ghost Sitemap Generator
 ===================
 
-Needy Sitemap Generator for Ghost blogging platform
+![Needy Ghost Sitemap Generator](https://github.com/jsinh/needy-ghost-sitemap/blob/master/ghost-logo.png "Needy Ghost Sitemap Generator")
+
+Simple sitemap generator for your Ghost blog.
