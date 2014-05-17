@@ -121,7 +121,7 @@ begin
 		exit
 	end
 
-	puts "\n===============> Start execution <===============" unless !startoptions[:verbose]
+	puts "\nStart execution: " + Time.now.utc
 	puts "\nYour options:" unless !startoptions[:verbose]
 	pp startoptions unless !startoptions[:verbose]
 
@@ -219,7 +219,7 @@ begin
 	end
 
 	puts "Taddam..Sitemap generated successfully !!" unless !startoptions[:verbose]
-	puts "\n===============> End execution <===============" unless !startoptions[:verbose]
+	puts "\nEnd execution " + Time.now.utc
 
 # => Print issues with MySQL if any on console
 rescue Mysql::Error => problem
