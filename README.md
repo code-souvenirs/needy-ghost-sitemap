@@ -33,7 +33,7 @@ Needy Ghost Sitemap Generator
 **Step:** [Download](https://github.com/jsinh/needy-ghost-sitemap/archive/master.zip) the script on your machine.
 
 	sudo apt-get update
-	sudo apt-get ruby ruby-dev
+	sudo apt-get install ruby ruby-dev
 	sudo apt-get install wget
 	sudo wget https://github.com/jsinh/needy-ghost-sitemap/raw/master/needy-ghost-sitemap.rb
 	sudo chown root:root needy-ghost-sitemap.rb
