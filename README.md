@@ -34,11 +34,13 @@ Needy Ghost Sitemap Generator
 
 	sudo apt-get update
 	sudo apt-get install ruby ruby-dev
-	sudo apt-get install libmysqlclient-dev libmysqlclient18 (Updated on 20th Oct 2014 - Required due to error installing MySQL gem)
+	sudo apt-get install libmysqlclient-dev libmysqlclient18
 	sudo apt-get install wget
 	sudo wget https://github.com/jsinh/needy-ghost-sitemap/raw/master/needy-ghost-sitemap.rb
 	sudo chown root:root needy-ghost-sitemap.rb
 	sudo chmod +x needy-ghost-sitemap.rb
+
+Note: Updated on 20th Oct 2014 - Required due to error installing MySQL gem.
 
 **Step:** Display help for usage
 
