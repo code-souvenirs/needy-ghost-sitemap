@@ -33,7 +33,8 @@ Needy Ghost Sitemap Generator
 **Step:** [Download](https://github.com/jsinh/needy-ghost-sitemap/archive/master.zip) the script on your machine.
 
 	sudo apt-get update
-	sudo apt-get install ruby ruby-dev
+	sudo apt-get install ruby
+	sudo apt-get install ruby-dev
 	sudo apt-get install libmysqlclient-dev libmysqlclient18
 	sudo apt-get install wget
 	sudo wget https://github.com/jsinh/needy-ghost-sitemap/raw/master/needy-ghost-sitemap.rb
@@ -105,7 +106,7 @@ I am using CRONTAB for scheduled execution of this script.
 **Step:** Install CRONTAB
 
 	sudo apt-get update
-	sudo apt-get gnome-schedule
+	sudo apt-get install gnome-schedule
 
 **Step:** Edit crontab and add this script for execution.
 
