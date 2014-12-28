@@ -1,6 +1,16 @@
 Needy Ghost Sitemap Generator
 ===================
 
+![Repository Deprecated](https://raw.githubusercontent.com/jsinh/needy-ghost-sitemap/master/Rest-in-Peace.png "Repository Deprecated")
+
+Now that Ghost Team have released a new version that provided SiteMap out of the box as feature. This repository is of no use anymore.
+
+[Sitemap Feature - Ghost Version - 0.5.6](https://github.com/TryGhost/Ghost/releases/tag/0.5.6)
+
+No use, in sense of using for Ghost blog's sitemap generation. Offcourse you can use this snippet as reference point to generate sitemap for something you wish for.
+
+---
+
 ![Needy Ghost Sitemap Generator](https://github.com/jsinh/needy-ghost-sitemap/raw/master/ghost-logo.png "Needy Ghost Sitemap Generator")
 
 ##Simple sitemap generator for your Ghost blog using ruby.
